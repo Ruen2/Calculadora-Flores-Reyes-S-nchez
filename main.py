@@ -89,8 +89,38 @@ def hex2dec(h):
         return None
 
 # Estudiante 03 (Sánchez Suárez Rubén)
+# Conversiones de bytes a kb, mg, gb y viceversa.
+def bytes_a_kb(b):
+    resultado = b / 1024
+    guardarhistorial(str(b) + " Bytes = " + str(resultado) + " KB")
+    return resultado
 
+def kb_a_mb(kb):
+    resultado = kb / 1024
+    guardarhistorial(str(kb) + " KB = " + str(resultado) + " MB")
+    return resultado
+
+def mb_a_gb(mb):
+    resultado = mb / 1024
+    guardarhistorial(str(mb) + " MB = " + str(resultado) + " GB")
+    return resultado
+
+def kb_a_bytes(kb):
+    resultado = kb * 1024
+    guardarhistorial(str(kb) + " KB = " + str(resultado) + " Bytes")
+    return resultado
+
+def mb_a_kb(mb):
+    resultado = mb * 1024
+    guardarhistorial(str(mb) + " MB = " + str(resultado) + " KB")
+    return resultado
+
+def gb_a_mb(gb):
+    resultado = gb * 1024
+    guardarhistorial(str(gb) + " GB = " + str(resultado) + " MB")
+    return resultado
 
 # Evidencia/ Integración (Estudiante 01 Flores Rentería Atziry) 
 
 # Yo junto lo que ustedes hagan, para realizar el menú.
+
