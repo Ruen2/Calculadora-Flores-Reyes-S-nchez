@@ -94,45 +94,36 @@ def hex2dec(h):
         return None
 
 # Estudiante 03 (Sánchez Suárez Rubén)
-
-# Conversiones de bytes a kb, mb, gb y viceversa, registrando en historial, convierte bytes a kilobytes y guarda operación en historial
-
+# Conversiones de bytes a kb, mg, gb y viceversa.
+#Definimos cada coversión 
 def bytes_a_kb(b):
     resultado = b / 1024
-    guardarhistorial(str(b) + " Bytes = " + str(resultado) + " KB")
+    guardarhistorial(str(b) + " Bytes = " + str(resultado) + " KB") #Se realiza la conversión y se guarda en el historial.
     return resultado
-
-# Convierte gigabytes a megabytes y graba el resultado en historial, convierte kilobytes a megabytes guardando el cálculo
 
 def kb_a_mb(kb):
     resultado = kb / 1024
-    guardarhistorial(str(kb) + " KB = " + str(resultado) + " MB")
+    guardarhistorial(str(kb) + " KB = " + str(resultado) + " MB") #Se realiza la conversión y se guarda en el historial.
     return resultado
-
-# Convierte megabytes a gigabytes y anota en historial
 
 def mb_a_gb(mb):
     resultado = mb / 1024
-    guardarhistorial(str(mb) + " MB = " + str(resultado) + " GB")
+    guardarhistorial(str(mb) + " MB = " + str(resultado) + " GB") #Se realiza la conversión y se guarda en el historial.
     return resultado
-
-# Convierte kilobytes a bytes y registra la operación
 
 def kb_a_bytes(kb):
     resultado = kb * 1024
-    guardarhistorial(str(kb) + " KB = " + str(resultado) + " Bytes")
+    guardarhistorial(str(kb) + " KB = " + str(resultado) + " Bytes") #Se realiza la conversión y se guarda en el historial.
     return resultado
-
-# Convierte megabytes a kilobytes guardando en historial
 
 def mb_a_kb(mb):
     resultado = mb * 1024
-    guardarhistorial(str(mb) + " MB = " + str(resultado) + " KB")
+    guardarhistorial(str(mb) + " MB = " + str(resultado) + " KB") #Se realiza la conversión y se guarda en el historial.
     return resultado
 
 def gb_a_mb(gb):
     resultado = gb * 1024
-    guardarhistorial(str(gb) + " GB = " + str(resultado) + " MB")
+    guardarhistorial(str(gb) + " GB = " + str(resultado) + " MB") #Se realiza la conversión y se guarda en el historial.
     return resultado
 
 # Evidencia/ Integración (Estudiante 01 Flores Rentería Atziry) 
@@ -260,4 +251,5 @@ if opcion == "1":
 # Inicio de programa
 if __name__ == "__main__":
     programa_principal()  
+
 
