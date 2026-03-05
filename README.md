@@ -20,6 +20,10 @@ Características:
 - Mensajes de error claros.
 
 Instrucciones de instalación y uso:
+Instalación:
+Para instalar la calculadora tienes que clonar el siguiente repositorio: https://github.com/Ruen2/Calculadora-Flores-Reyes-S-nchez.git, abrir tu VSCode o Python, abrir una nueva terminal bash y poner "git clone (link)". Al momento de que se descarguen todos los archivos, te dirigues al archivo llamado "main.py" para evitar errores, después correr el código "run". 
+Uso:
+Ahora aparecerá un menú interactivo con opciones del 1 al 
 
 Ejemplos de ejecución:
 
