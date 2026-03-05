@@ -34,46 +34,32 @@ def guardarhistorial(lista):
         for item in lista:
             f.write(item + "\n")
 
-
-# Estudiante 02 (Reyes Cuevas Marco Antonio)
+    # Estudiante 02 (Reyes Cuevas Marco Antonio)
 
 # Suma dos números
-
 def sumar(a, b):
     return a + b
-
-# Resta b de a
-
+# Resta dos números
 def restar(a, b):
     return a - b
-
-# Multiplica dos valores
-
+#Multiplica dos números
 def multiplicar(a, b):
     return a * b
-
-# Divide a entre b, devuelve None si el divisor es cero
-
+# Divide dos números, devuelve None si el divisor es cero
 def dividir(a, b):
     if b == 0:
         return None
     return a / b
-
-# Calcula el resto de la división de a por b (módulo)
-
+# Calcula el resto de la división de a por b (módulo), devuelve None si el divisor es cero
 def modulo(a, b):
     if b == 0:
         return None
     return a % b
-
-# Eleva a a la potencia b
-
+# Eleva un número a la potencia de otro
 def potencia(a, b):
     return a ** b
 
-# Conversiones entre bases numéricas
-# Convierte un entero decimal a una cadena binaria
-
+    #Conversions numéricas
 def dec2bin(n):
     n = int(n)
     if n == 0:
@@ -83,9 +69,7 @@ def dec2bin(n):
         s = str(n % 2) + s
         n //= 2
     return s
-
 # Convierte un número decimal a su representación hexadecimal
-
 def dec2hex(n):
     n = int(n)
     if n == 0:
@@ -96,17 +80,13 @@ def dec2hex(n):
         s = hex_dig[n % 16] + s
         n //= 16
     return s
-
-# Interpreta una cadena binaria y devuelve su valor decimal
-
+# Interpreta una cadena binaria y devuelve su valor decimal, devuelve None si la cadena no es un binario válido
 def bin2dec(b):
     try:
         return int(str(b), 2)
     except ValueError:
         return None
-
-# Interpreta una cadena hexadecimal y devuelve el valor decimal
-
+# Interpreta una cadena hexadecimal y devuelve su valor decimal, devuelve None si la cadena no es un hexadecimal válido
 def hex2dec(h):
     try:
         return int(str(h), 16)
@@ -280,11 +260,4 @@ if opcion == "1":
 # Inicio de programa
 if __name__ == "__main__":
     programa_principal()  
-
-
-
-                      
-
-
-
 
