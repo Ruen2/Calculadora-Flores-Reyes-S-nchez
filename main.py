@@ -1,6 +1,8 @@
-import os 
+import os  
+# módulo 'os' se usa para manejar el sistema de archivos (crear carpetas, verificar existencia de archivos)
 
-# Estudiante 01 (Flores Rentería Atziry)
+
+# Función de utilidad para pedir y validar un número al usuario, recibe un mensaje y repite la lectura hasta obtener un float
 
 def validar_numero(mensaje): 
     """Verifica que la entrada sea un número válido."""
@@ -11,6 +13,8 @@ def validar_numero(mensaje):
         except ValueError:
             print("Entrada no válida. Por favor, ingresa un número válido.")
 
+# Lee el archivo de historial y devuelve las líneas como lista
+
 def historial(): 
     """Carga los datos guardados en el archivo txt."""
     lista = []
@@ -19,6 +23,8 @@ def historial():
             for line in f:
                 lista.append(line.strip())
     return lista
+
+# Escribe en el archivo de historial, creando el directorio si es necesario
 
 def guardarhistorial(lista): 
     """Guarda el historial."""
@@ -31,29 +37,42 @@ def guardarhistorial(lista):
 
 # Estudiante 02 (Reyes Cuevas Marco Antonio)
 
+# Suma dos números
+
 def sumar(a, b):
     return a + b
+
+# Resta b de a
 
 def restar(a, b):
     return a - b
 
+# Multiplica dos valores
+
 def multiplicar(a, b):
     return a * b
+
+# Divide a entre b, devuelve None si el divisor es cero
 
 def dividir(a, b):
     if b == 0:
         return None
     return a / b
 
+# Calcula el resto de la división de a por b (módulo)
+
 def modulo(a, b):
     if b == 0:
         return None
     return a % b
 
+# Eleva a a la potencia b
+
 def potencia(a, b):
     return a ** b
 
-# conversions numéricas
+# Conversiones entre bases numéricas
+# Convierte un entero decimal a una cadena binaria
 
 def dec2bin(n):
     n = int(n)
@@ -64,6 +83,8 @@ def dec2bin(n):
         s = str(n % 2) + s
         n //= 2
     return s
+
+# Convierte un número decimal a su representación hexadecimal
 
 def dec2hex(n):
     n = int(n)
@@ -76,11 +97,15 @@ def dec2hex(n):
         n //= 16
     return s
 
+# Interpreta una cadena binaria y devuelve su valor decimal
+
 def bin2dec(b):
     try:
         return int(str(b), 2)
     except ValueError:
         return None
+
+# Interpreta una cadena hexadecimal y devuelve el valor decimal
 
 def hex2dec(h):
     try:
@@ -89,26 +114,36 @@ def hex2dec(h):
         return None
 
 # Estudiante 03 (Sánchez Suárez Rubén)
-# Conversiones de bytes a kb, mg, gb y viceversa.
+
+# Conversiones de bytes a kb, mb, gb y viceversa, registrando en historial, convierte bytes a kilobytes y guarda operación en historial
+
 def bytes_a_kb(b):
     resultado = b / 1024
     guardarhistorial(str(b) + " Bytes = " + str(resultado) + " KB")
     return resultado
+
+# Convierte gigabytes a megabytes y graba el resultado en historial, convierte kilobytes a megabytes guardando el cálculo
 
 def kb_a_mb(kb):
     resultado = kb / 1024
     guardarhistorial(str(kb) + " KB = " + str(resultado) + " MB")
     return resultado
 
+# Convierte megabytes a gigabytes y anota en historial
+
 def mb_a_gb(mb):
     resultado = mb / 1024
     guardarhistorial(str(mb) + " MB = " + str(resultado) + " GB")
     return resultado
 
+# Convierte kilobytes a bytes y registra la operación
+
 def kb_a_bytes(kb):
     resultado = kb * 1024
     guardarhistorial(str(kb) + " KB = " + str(resultado) + " Bytes")
     return resultado
+
+# Convierte megabytes a kilobytes guardando en historial
 
 def mb_a_kb(mb):
     resultado = mb * 1024
@@ -234,5 +269,6 @@ if__if __name__ == "__main__":
 
 
                       
+
 
 
