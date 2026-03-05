@@ -29,8 +29,64 @@ def guardarhistorial(lista):
             f.write(item + "\n")
 
 
-# Estudiante 02 (Reyes Cuevas Marco Antonio
+# Estudiante 02 (Reyes Cuevas Marco Antonio)
 
+def sumar(a, b):
+    return a + b
+
+def restar(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return None
+    return a / b
+
+def modulo(a, b):
+    if b == 0:
+        return None
+    return a % b
+
+def potencia(a, b):
+    return a ** b
+
+# conversions numéricas
+
+def dec2bin(n):
+    n = int(n)
+    if n == 0:
+        return "0"
+    s = ""
+    while n > 0:
+        s = str(n % 2) + s
+        n //= 2
+    return s
+
+def dec2hex(n):
+    n = int(n)
+    if n == 0:
+        return "0"
+    hex_dig = "0123456789ABCDEF"
+    s = ""
+    while n > 0:
+        s = hex_dig[n % 16] + s
+        n //= 16
+    return s
+
+def bin2dec(b):
+    try:
+        return int(str(b), 2)
+    except ValueError:
+        return None
+
+def hex2dec(h):
+    try:
+        return int(str(h), 16)
+    except ValueError:
+        return None
 
 # Estudiante 03 (Sánchez Suárez Rubén)
 
