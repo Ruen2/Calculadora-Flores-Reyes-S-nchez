@@ -178,8 +178,61 @@ elif sub_op == "6": res= gb_a_mb(val); txt = f"{val} GB a MB"
     print(f"Resultado: {res}")
 lista_historial.append(f"{txt} = {res}")
 
+#Funcionamiento de las opciones del menú principal "Sistemas"
+elif opcion == "3"
+print("\n--- SISTEMAS NUMÉRICOS ---")
+print("1. Dec a Bin | 2. Dec a Hex | 3. Bin a Dec | 4. Hex a Dec")
+sub_op = input("seleccione: ")
+
+res = None
+if sub_op == "1":
+    n = validar_numero("Número decimal: ")
+    res = dec2bin(n)
+    lista_historial.append(f"Decimal {n} a Hexadecimal = {res}")
+elif sub_op == "2":
+    n = validar_numero("Número decimal: ")
+    res = dec2hex(n)
+    lista_historial.append(f"Decimal {n} a Hexadecimal = {res}")
+elif sub_op == "3":
+    b = input("Número binario: ")
+    res = bin2dec(b)
+    lista_historial.append(f"Binario {b} a Decimal = {res}")
+elif sub_op == "4":
+    h = input("Número hexadecimal: ")
+    res = hex2dec(h)
+    lista_historial.append(f"Hexadecimal {h} a Decimal = {res}")
+            
+if res is not None:
+    print(f"Resultado: {res}")
+else:
+    print("Error: Entrada de sistema numérico inválida.")
+
+# Desarrollo de historial
+elif opcion == "4": 
+print("\n" + "-"*10 + " HISTORIAL (Últimas 10) " + "-"*10)
+if not lista_historial:
+    print("No hay registros.")
+else:
+    for item in lista_historial[-10:]:
+# Opción de limpiar historial
+elif opcion == "5":
+    lista_historial.clear()
+    print("HIstorial borrado.")
+# Opción de salir 
+
+elif opcion == "6": 
+guardarhistorial(lista_historial)
+print("¡Graciass por utilizar nuestra calculadora! Tu historial fue guardado.")
+break
+
+else: print("Opción no válida.")
+
+# Inicio de programa
+if__if __name__ == "__main__":
+    programa_principal()    
 
 
 
                       
+
 
