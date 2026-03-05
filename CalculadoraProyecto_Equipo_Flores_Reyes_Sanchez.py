@@ -31,7 +31,7 @@ def guardarhistorial(lista):
         os.makedirs("datos")
     with open("datos/historial.txt", "w") as f:
         for item in lista:
-            f.write(item + "\n")
+            f.write(str(item) + "\n")
 
     # Estudiante 02 (Reyes Cuevas Marco Antonio)
 
@@ -249,3 +249,4 @@ def programa_principal():
 # Inicio de programa
 if __name__ == "__main__":
     programa_principal()
+
