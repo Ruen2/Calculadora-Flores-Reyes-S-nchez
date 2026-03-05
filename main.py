@@ -1,6 +1,5 @@
 import os  
-# módulo 'os' se usa para manejar el sistema de archivos (crear carpetas, verificar existencia de archivos)
-
+# Módulo 'os' se usa para manejar el sistema de archivos (crear carpetas, verificar existencia de archivos)
 
 # Función de utilidad para pedir y validar un número al usuario, recibe un mensaje y repite la lectura hasta obtener un float
 
@@ -127,29 +126,29 @@ def gb_a_mb(gb):
     return resultado
 
 # Evidencia/ Integración (Estudiante 01 Flores Rentería Atziry) 
-def programa_principal
-    lista_historial = cargar_historial()
-    while True: 
-    print("-----------------------------------------")
-    print("CALCULADORA MULTIFUNCIONAL")
-    print("Equipo: Marco Antonio Reyes Cuevas, Rubén Sánchez Suárez, Atziry Flores Rentería")
-    print("-----------------------------------------")\n                   
-    print("1. Calculadora básica")
-    print("2. Conversor de unidades de datos")
-    print("3. Calculadora de sistemas numéricos")
-    print("4. Ver historial")
-    print("5. Limpiar historial")
-    print("6. Salir") 
-    opcion = input("\nSeleccione una opción: ")
-#Funcionamiento de las opciones del menú principal "Calculadora" 
-if opcion == "1": 
-    print("\n--- CALCULADORA BÁSICA ---")
-    print("1. Suma | 2. Resta | 3. Mult. | 4. Div. | 5. Mod | 6. pot") 
-    sub_op = input("Seleccione su operación: ")
-    n1 = validar_numero("Ingrese su primer número: ")
-    n2 = validar_numero("Ingrese su segundo numero: ")
-    res = None
-    simbolo = ""
+def programa_principal():
+    lista_historial = historial()
+    while True:
+        print("-----------------------------------------")
+        print("CALCULADORA MULTIFUNCIONAL")
+        print("Equipo: Marco Antonio Reyes Cuevas, Rubén Sánchez Suárez, Atziry Flores Rentería")
+        print("-----------------------------------------")
+        print("1. Calculadora básica")
+        print("2. Conversor de unidades de datos")
+        print("3. Calculadora de sistemas numéricos")
+        print("4. Ver historial")
+        print("5. Limpiar historial")
+        print("6. Salir")
+        opcion = input("\nSeleccione una opción: ")
+        # Funcionamiento de las opciones del menú principal "Calculadora"
+        if opcion == "1":
+            print("\n--- CALCULADORA BÁSICA ---")
+            print("1. Suma | 2. Resta | 3. Mult. | 4. Div. | 5. Mod | 6. pot")
+            sub_op = input("Seleccione su operación: ")
+            n1 = validar_numero("Ingrese su primer número: ")
+            n2 = validar_numero("Ingrese su segundo numero: ")
+            res = None
+            simbolo = ""
             if sub_op == "1":
                 res = sumar(n1, n2)
                 simbolo = "+"
@@ -173,9 +172,8 @@ if opcion == "1":
             else:
                 texto = f"{n1} {simbolo} {n2} = {res}"
                 print(f"Resultado: {texto}")
-
-# Funcionamiento de las opciones del menú principal "Unidades"
-       elif opcion == "2":
+        # Funcionamiento de las opciones del menú principal "Unidades"
+        elif opcion == "2":
             print("\n--- CONVERSOR DE DATOS ---")
             print("1. B a KB | 2. KB a MB | 3. MB a GB | 4. KB a B | 5. MB a KB | 6. GB a MB")
             sub_op = input("Seleccione: ")
@@ -202,7 +200,7 @@ if opcion == "1":
                 txt = f"{val} GB a MB"
             print(f"Resultado: {res}")
             lista_historial.append(f"{txt} = {res}")
-#Funcionamiento de las opciones del menú principal "Sistemas"
+        # Funcionamiento de las opciones del menú principal "Sistemas"
         elif opcion == "3":
             print("\n--- SISTEMAS NUMÉRICOS ---")
             print("1. Dec a Bin | 2. Dec a Hex | 3. Bin a Dec | 4. Hex a Dec")
@@ -228,8 +226,7 @@ if opcion == "1":
                 print(f"Resultado: {res}")
             else:
                 print("Error: Entrada de sistema numérico inválida.")
-
-# Desarrollo de historial
+        # Desarrollo de historial
         elif opcion == "4":
             print("\n" + "-"*10 + " HISTORIAL (Últimas 10) " + "-"*10)
             if not lista_historial:
@@ -248,8 +245,7 @@ if opcion == "1":
             break
         else:
             print("Opción no válida.")
+
 # Inicio de programa
 if __name__ == "__main__":
-    programa_principal()  
-
-
+    programa_principal()
