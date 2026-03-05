@@ -136,8 +136,8 @@ def programa_principal():
         print("1. Calculadora básica")
         print("2. Conversor de unidades de datos")
         print("3. Calculadora de sistemas numéricos")
-        print("4. Ver historial")
-        print("5. Limpiar historial")
+        print("4. Ver historial(el historial se guarda al salir de la calculadora)")
+        print("5. Limpiar historial(el historial se guarda al salir de la calculadora")
         print("6. Salir")
         opcion = input("\nSeleccione una opción: ")
         # Funcionamiento de las opciones del menú principal "Calculadora"
@@ -249,4 +249,5 @@ def programa_principal():
 # Inicio de programa
 if __name__ == "__main__":
     programa_principal()
+
 
