@@ -26,6 +26,7 @@ Para instalar la calculadora tienes que clonar el siguiente repositorio: https:/
 Uso:
 Ahora aparecerá un menú interactivo con opciones del 1 al 6, en donde escribirás en la misma terminal la opción con el número que se indica para realizar la operación que se requiera, así saldrán menús en donde se indicará que debes colocar, como los números. Luego saldrá silmultáneamente el resultado junto con el menú principal para volver a realizar alguna operación.
 Dato: El historial de las operaciones que realizaste saldrán al momento de seleccionar la opción 6 "Salir", aparecerá un nuevo documento donde podrás ver tu historial.
+Dato: La opción "Limpiar hisotrial" elimina tu historial para que no se guarde al salir, al momento de salir y no se limpio el historial con anterioridad, se guardam en el documento y no se puede borrar con la terminal.
 
 Ejemplos de ejecución:
 
